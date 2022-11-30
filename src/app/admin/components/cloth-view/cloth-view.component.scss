@@ -1,0 +1,25 @@
+@import "~@ng-select/ng-select/themes/material.theme.css";
+
+label{
+  padding: 10px;
+}
+input,.ng-select-container{
+    border-radius: 25px !important;
+    padding: 10px
+}
+.btn{
+  float: right;
+    margin: 1%;
+    padding:3px 20px 3px 20px;
+    border: none;
+    border:1px solid #ff0066;
+    color: #000;
+    font-size: 18px;
+    font-family: Montserrat;
+    border-radius: 25px;
+    &:hover{
+      background: #ff0066;
+      color: white;
+    }
+}
+

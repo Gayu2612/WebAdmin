@@ -1,0 +1,57 @@
+<section id="Register">
+  <div class="container">
+    <div class="row">
+      <div class="col-6"></div>
+      <div class="col-6">
+        <div class="card card-body">
+          <h5>Register-Page</h5>
+          <form #RegisterForm="ngForm" action="" (ngSubmit)="(RegisterForm.form.valid)&& register()">
+            <div class="form-group m-3">
+              <label for="email">Name</label>
+              <input required type="text" class="form-control" placeholder="Name" #name="ngModel" [(ngModel)]="registers.name"
+                [class.error]="" id="name"  pattern="^[a-zA-Z]+$"  name="name" ngModel>
+              <div *ngIf="RegisterForm.submitted && name.invalid" class="invalid-form">
+                <small *ngIf="name.errors?.['required']"> The field is required</small>
+                <small *ngIf="name.errors?.['pattern']">Only Charecters are Allowed</small>
+                <small *ngIf="name.errors?.['minlength']">Minimum atleast five</small>
+              </div>
+            </div>
+            <div class="form-group m-3">
+              <label for="mobile">Mobile</label>
+              <input required type="text" class="form-control" placeholder="Mobile" #mobile="ngModel" [(ngModel)]="registers.mobile"
+                [class.errors]="RegisterForm.submitted && mobile.invalid" id="mobile"  pattern="^[0-9]*$" minlength="10" name="mobil" ngModel>
+              <div *ngIf="RegisterForm.submitted && mobile.invalid" class="invalid-form">
+                <small *ngIf="mobile.errors?.['required']">The field is required</small>
+                <small *ngIf="mobile.errors?.['pattern']">provide Valid Number</small>
+              </div>
+            </div>
+            <div class="form-group m-3">
+              <label for="email">Email</label>
+              <input  type="email" class="form-control" placeholder="Email" #email="ngModel" [(ngModel)]="registers.email"
+                [class.errors]="RegisterForm.submitted && email.invalid" id="email" name="email" email required>
+              <div *ngIf="RegisterForm.submitted && email.invalid" class="invalid-form">
+                <small *ngIf="email.errors?.['required']">email is required</small>
+                <small *ngIf="email.errors?.['email']">Invalid email</small>
+                <!-- <small *ngIf="email1.invalid">Invalid email</small> -->
+              </div>
+
+            </div>
+            <div class="form-group m-3">
+              <label for="password">Password</label>
+              <input required type="password" class="form-control" placeholder="password" id="password" name="password"
+              [class.errors]="RegisterForm.submitted && password.invalid"  #password="ngModel" [(ngModel)]="registers.password" minlength="8" ngModel>
+              <div *ngIf="RegisterForm.submitted && password.invalid" class="invalid-form">
+                <small *ngIf="password.errors?.['required']">password is required</small>
+                <small *ngIf="password.errors?.['minlength']">Password must be 8 letters</small>
+
+              </div>
+            </div>
+            <div class="d-flex">
+              <button type="submit" class="btn">Create Account</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

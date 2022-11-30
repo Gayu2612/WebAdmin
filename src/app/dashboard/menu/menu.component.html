@@ -1,0 +1,23 @@
+
+
+ <mat-sidenav-container>
+  <mat-sidenav [(opened)]="opened" mode="side">
+    <app-side-nav></app-side-nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- <mat-icon (click)="opened = !opened" fontIcon="menu">menu</mat-icon> -->
+    <!-- <button (click)="opened = !opened" mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+      <mat-icon>menu</mat-icon>
+    </button> -->
+
+    <div class="example-button-container d-flex">
+      <button (click)="opened = !opened" mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      </div>
+    <app-nav-bar></app-nav-bar>
+
+    <router-outlet></router-outlet>
+    <!-- <app-footer></app-footer> -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

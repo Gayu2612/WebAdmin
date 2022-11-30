@@ -1,0 +1,69 @@
+<section id="clothView">
+  <div class="container">
+    <h3 class="m-3">clothView</h3>
+   <form #clothForm action="ngform">
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="ItemName">ItemName</label>
+           <input type="text" id="ItemName" class="form-control" name="ItemName" placeholder="Enter ItemName"
+          #ItemName="ngModel" [(ngModel)]="cloth.clothName">
+        </div>
+      </div>
+      <div class="col-6">
+      <div class="form-group">
+        <label for="Category">Category</label>
+         <input type="text" id="Category" class="form-control" name="Category" placeholder="Enter Category" #Category="ngModel" [(ngModel)]="cloth.category">
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="Brand">Brand</label>
+           <input type="text" id="Brand" class="form-control" name="Brand" placeholder="Enter Brand" #Brand="ngModel" [(ngModel)]="cloth.brand">
+        </div>
+      </div>
+      <div class="col-6">
+      <div class="form-group">
+        <label for="Description">Description</label>
+         <input type="text" id="Description" class="form-control" name="Description" placeholder="Description" #Description="ngModel" [(ngModel)]="cloth.description">
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="Price">Price</label>
+           <input type="text" id="Price" class="form-control" name="Price" placeholder="Price" #Price="ngModel" [(ngModel)]="cloth.price" >
+        </div>
+      </div>
+      <div class="col-6">
+      <div class="form-group">
+        <label for="Discount">Discount</label>
+         <input type="text" id="Discount" class="form-control" name="Discount" placeholder="Discount" #Discount="ngModel" [(ngModel)]="cloth.discount" >
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="Price">maxOrderQuantity</label>
+           <input type="text" id="maxOrderQuantity" class="form-control" name="maxOrderQuantity" placeholder="maxOrderQuantity" #maxOrderQuantity="ngModel" [(ngModel)]="cloth.maxQuantity" >
+        </div>
+      </div>
+      <div class="col-6">
+      <div class="form-group">
+        <label for="Discount">Type</label>
+        <ng-select [items]="type" bindLabel="type" bindValue="_id"
+        [(ngModel)]="cloth.type" name="type" #TDDepRef="ngModel" required placeholder="type">
+      </ng-select>
+      </div>
+      </div>
+    </div>
+    <div >
+    <button  routerLink="/dashboard/admin/clothlist" (click)="saveCloth()" type="submit" class="btn">{{button}}</button>
+  </div>
+  </form>
+  </div>
+</section>

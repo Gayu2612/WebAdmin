@@ -1,0 +1,30 @@
+mat-sidenav-container {
+  height: 100vh;
+}
+mat-sidenav{
+  width: 20%;
+}
+
+
+
+
+
+.example-button-container {
+  // display: flex;
+  justify-content: center;
+  width: 120px;
+button{
+margin: 10%;
+padding: 3px 10px 3px 7px;
+background:  #ff0066;
+color: white;
+border: none;
+border-radius: 6px;
+font-size: 13px;
+
+mat-icon{
+  font-size: 30px;
+}
+
+}
+}

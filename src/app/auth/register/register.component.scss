@@ -1,0 +1,29 @@
+small{
+  color:red;
+}
+.card{
+  position: relative;
+  top:100px;
+  left: -55%;
+
+  .d-flex{
+    justify-content:end;
+
+    button{
+      border: 1px solid #ff1a8c;
+      border-radius: 30px;
+      padding: 10px 25px 10px 25px;
+      color:#ff1a8c;
+      transition: 0.4s;
+
+      &:hover{
+         background-color: #ff1a8c;
+         color: white;
+      }
+
+    }
+    span{
+      padding-left: 36%;
+    }
+  }
+}
