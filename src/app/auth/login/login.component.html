@@ -2,7 +2,7 @@
   <!-- <video autoplay muted loop id="myVideo">
     <source src="assets/Silky_Blue_720P_Motion_Background_Loop.mp4" type="video/mp4">
    </video> -->
-  <div class="container">
+  <!-- <div class="container">
       <div class="row">
       <div class="col-6"></div>
       <div class="col-6">
@@ -36,5 +36,42 @@
       </div>
       </div>
       </div>
+  </div> -->
+</section>
+
+
+<!---Login Form-->
+
+<section id="loginDesign">
+  <div class="container">
+    <div class="drop">
+      <div class="content">
+        <h2>Sign in</h2>
+        <form #loginForm="ngForm"action="" (ngSubmit)="(loginForm.form.valid)&&postLogin()">
+          <div class="inputBox">
+            <input  type="email" class="form-control" placeholder="Email" #email="ngModel" [(ngModel)]="login.email"
+            [class.errors]="loginForm.submitted && email.invalid"  id="email" name="email" email required  placeholder="Username">
+            <div *ngIf="loginForm.submitted && email.invalid" class="invalid-form">
+              <small *ngIf="email.errors?.['required']">email is required</small>
+              <small *ngIf="email.errors?.['email']">Invalid email</small>
+            </div>
+          </div>
+          <div class="inputBox">
+            <input required type="password" class="form-control" placeholder="password" id="password" name="password"
+            [class.errors]="loginForm.submitted && password.invalid" minlength="8"  #password="ngModel"[(ngModel)]="login.password"  placeholder="password">
+            <div *ngIf="loginForm.submitted && password.invalid" class="invalid-form">
+              <small *ngIf="password.errors?.['required']">password is required</small>
+              <small *ngIf="password.errors?.['minlength']">Password must be 8 letters</small>
+
+            </div>
+          </div>
+          <div class="inputBox">
+            <input type="submit" value="Login">
+            <!-- <span>Don't have an account?</span><a href="#" routerLink="/auth/register">register</a> -->
+
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
