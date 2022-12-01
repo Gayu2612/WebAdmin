@@ -10,9 +10,12 @@
   .user{
     padding: 0px 70px 0px 70px;
   }
+  .btn{
+    border: none;
+  }
   .userContent{
     height: 40px;
-    padding:0px 30px 0px 45px;
+    padding:0px 30px 0px 30px;
     font-family: "magistral Honesty italic.wolff";
     border:3px solid #ff0066;
     box-shadow: -2px 4px 0px 2px #ff0066;
@@ -23,7 +26,7 @@
 
     &:hover{
       background-color: #ff0066;
-      color: #fff;
+      // color: #ff0f5b;
     }
   }
 }

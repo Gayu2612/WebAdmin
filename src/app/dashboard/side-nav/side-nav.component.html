@@ -8,12 +8,22 @@
      <h3 [routerLink]="admin?.url">{{admin?.title}}</h3>
   </div>
   </div>
-  <div class="user" *ngIf="logintype=='user'">
-    <div class="userContent" *ngFor="let user of userSection">
-       <h3>{{user?.title}}</h3>
-       <div *ngFor="let children of user?.children">
-        <h4 [routerLink]="children?.url">{{children?.title}}</h4>
+  <div class="user" *ngIf="logintype == 'user'">
+    <div class="dropdown userContent"  *ngFor="let user of userSection">
+      <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        {{user?.title}}
+      </button>
+      <ul class="dropdown-menu" *ngFor="let children of user?.children">
+        <div *ngFor="let children of user?.children">
+        <li><a class="dropdown-item" [routerLink]="children?.url" href="#">{{children?.title}}</a></li>
        </div>
+      </ul>
     </div>
-    </div>
-</div>
+  </div>
+    <!-- <div class="userContent" *ngFor="let user of userSection"> -->
+       <!-- <h3>{{user?.title}}</h3> -->
+       <!-- <div *ngFor="let children of user?.children">
+        <h4 [routerLink]="children?.url">{{children?.title}}</h4>
+       </div> -->
+    <!-- </div> -->
+<!-- </div> -->

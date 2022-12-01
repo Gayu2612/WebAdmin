@@ -1,67 +1,66 @@
-small{
-  color:red;
-}
-  video{
-    position: absolute;
-    width: 100%;
-   }
+// small{
+//   color:red;
+// }
+//   video{
+//     position: absolute;
+//     width: 100%;
+//    }
 
- .card{
-   background: none;
-   position: relative;
-   top:150px;
-   left: -55%;
-   padding: 5%;
-   border-radius: 30px;
-   transition: 0.4s;
-   h5{
-     font-size: 30px;
-     text-align: center;
-     font-family: montserrat;
-   }
-   form{
+//  .card{
+//    background: none;
+//    position: relative;
+//    top:150px;
+//    left: -55%;
+//    padding: 5%;
+//    border-radius: 30px;
+//    transition: 0.4s;
+//    h5{
+//      font-size: 30px;
+//      text-align: center;
+//      font-family: montserrat;
+//    }
+//    form{
 
-     input{
-       background: none;
-     }
-   }
+//      input{
+//        background: none;
+//      }
+//    }
 
-   .d-flex{
-     justify-content:space-between;
+//    .d-flex{
+//      justify-content:space-between;
 
-     button{
-       border: 1px solid #33ffff;
-       border-radius: 30px;
-       padding: 5px 25px 5px 25px;
-       color:#33ffff;
-       transition: 0.4s;
+//      button{
+//        border: 1px solid #33ffff;
+//        border-radius: 30px;
+//        padding: 5px 25px 5px 25px;
+//        color:#33ffff;
+//        transition: 0.4s;
 
-       &:hover{
-          background-color: #33ffff;
-          color: white;
-       }
+//        &:hover{
+//           background-color: #33ffff;
+//           color: white;
+//        }
 
-     }
-     span{
-       padding-left:45%;
-     }
-   }
+//      }
+//      span{
+//        padding-left:45%;
+//      }
+//    }
 
-   &:hover{
-     background-color: rgba(255, 255, 255, 0.6);
-     cursor: pointer;
+//    &:hover{
+//      background-color: rgba(255, 255, 255, 0.6);
+//      cursor: pointer;
 
-   }
- }
+//    }
+//  }
+
  #loginDesign{
-  margin: 15%;
-  padding: 0;
-  box-sizing:border-box ;
-  font-family: 'poppins',sanserif;
+  margin:10% 40% 10% 30%;
+  // background: #eff0f4 !important;
 
 .container{
   position: relative;
-  // display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -87,8 +86,8 @@ small{
 .container .drop::before{
   content: '';
   position: absolute;
-  top: 90px;
-  left:110px;
+  top: 40px;
+  left:80px;
   width:35px;
   height: 35px;
   border-radius:50%;
@@ -98,8 +97,8 @@ small{
 .container .drop::after{
   content: '';
   position: absolute;
-  top:130px;
-  left:135px;
+  top:70px;
+  left:110px;
   width:15px;
   height: 15px;
   border-radius:50%;
@@ -183,5 +182,64 @@ small{
 {
 width: 150px;
 
+}
+.btns{
+  position: absolute;
+  right: -120px;
+  bottom: 0;
+  width: 120px;
+  height: 120px;
+  background: #c61dff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
+  font-size: 0.8em;
+  transition: 0.25s;
+  text-align: center;
+  box-shadow:inset 10px 10px 10px rgba(190,1,254,0.05),
+  15px 25px 10px rgba(190,1,254,0.1),
+  25px 30px 30px rgba(190,1,254,0.1),
+  inset -10px -10px 15px rgba(255, 255, 255, 0.5);
+  border-radius: 24% 76% 68% 32% / 33% 47% 53% 67% ;
+}
+.btns:hover{
+  border-radius: 50%;
+}
+.btns::before{
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.45;
+}
+.btns.signup{
+  width: 80px;
+  height: 80px;
+  bottom: 150px;
+  right: -140px;
+  border-radius: 24% 76% 68% 32% / 33% 47% 53% 67% ;
+  background: #01b4ff;
+  transition: 0.3s;
+  box-shadow:inset 10px 10px 10px rgba(1,180,255,0.05),
+  15px 25px 10px rgba(180,1,255,0.1),
+  25px 30px 30px rgba(180,1,255,0.1),
+  inset -10px -10px 15px rgba(255, 255, 255, 0.5);
+ }
+ .btns.signup::before{
+  left: 20px;
+   width: 15px;
+   height: 15px;
+ }
+ .btns.btns.signup:hover{
+  border-radius: 50%;
 }
 }
